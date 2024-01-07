@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Call Center Application</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Anton&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <style>
+          h1{
+           
+            font-size:35px;
+          }
+            body{
+            background:whitesmoke;
+           }
+          div{
+            margin:auto;          
+          text-align: center;
+        }
+       
+       .footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color:grey;
+   color:black;
+   text-align: center;
+   font-size: 15px;
+}
+
+h2{
+    text-align: center;
+    
+   }
+label{
+    color:black;
+    padding:10px;
+}
+
+    
+        </style>
+
+            <div class="container">
+                <h1 style="text-align:center";>Primary Healthcare Center for Remote Access(PHCRA)<i class="fa fa-user-md" style="font-size:48px;color:black"></i></h1>
+               </div>
+                <nav class="navbar navbar-default">
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg" Style="font-size: 15px;">About</button>
+                <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                      ABOUT THIS WEBSITE<br><br>
+                      Primary Healthcare Centre for Remote Access (PHCRA) is an application used by the call-centre employees when they receive a call on the toll-free number from any remote area citizens.<br>
+                      Using the Aadhar number provided by the patient, the application lists the personal and medical records of the patient for the use of call centre executive.<br>
+                      It helps the execute to give the appropriate advise depending on the requirement of the patient on-call and direct either to a nearby diagnostic centre or hospital.<br>
+                      The call centre execute will also fix an appointment for the patient on-call.<br>
+                      The hospitals and diagnostics will have read/update access to the medical records.<br>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-sm"  Style="font-size: 15px;">Features</button>
+                
+                <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-sm">
+                    <div class="modal-content">
+                      FEATURES OF THIS WEBSITE<br>
+                      1-Patient Basic Information Table-1 will contain the basic information of the patients.<br>
+                      Patient Hospitalization / Diagnostics Record Table-2 will store the detailed medical records of the patients.<br>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+            </nav>  
+                      <centre>
+                    
+                     <div id="form-group">
+                     <h2><label for="aadharid">Enter Aadhar Card Number</label></h2>
+                    <h2> <centre><input type="text"  id="aadharid"  name="aadharid"></centre></h2>
+                    
+                    </div>
+                     <h2><button type="button" class="btn btn primary" onclick="Validate()">Login</button></centre></h2>
+                     
+                
+    
+           <script>
+              
+                
+                     function Validate()
+                     {
+                         var aadhar = document.getElementById("aadharid").value;
+                         var aadharTwelveDigit = /^\d{12}$/;
+                     
+                         if(aadhar.match(aadharTwelveDigit))
+                         {
+                             
+                              window.location.href="index2.html";
+             
+                         }
+                         else{
+                             alert("Invalid Aadhar Number");
+                             return false;
+                         }
+                     }
+            </script>
+            <div class="footer">CONTACT US : <br>
+              <i class="fa fa-envelope" style="font-size:24px"></i> phcra@gmail.com<br>
+              <i class="fa fa-phone" style="font-size:24px"></i> 9087464312,7645653990
+            </p>
+            </div>
+            <script src="js/jQuery.js"></script>
+            <script src="js/Popper.js"></script>
+            <script src="js/bootstrap.min.js"></script>
+            
+            
+        </body>
+        </html>
+        

@@ -1,0 +1,153 @@
+<html>
+<input type="text" name="" id="myInput" placeholder="Search" onkeyup="searchFun()">
+            <table class="table table-bordered table-hover table-condensed" cellspacing=2 cellpadding=5 id="data_table">
+                <thead><tr><th title="Field #1">Aadhar Number</th>
+                <th title="Field #2">Name</th>
+                <th title="Field #3">Age</th>
+                <th title="Field #4">Gender</th>
+                <th title="Field #5">Address</th>
+                <th title="Field #6">Medical Record</th>
+                </tr></thead>
+                <tbody>
+                <tr id="row1">
+                <td align="right" id="aadhar_row1">999941057058</td>
+                <td id="name_row1">Laxmi</td>
+                <td align="right" id="age_row1">45</td>
+                <td id="gender_row1">Female</td>
+                <td id="add_row1">Mangalpally</td>
+                <td id="record_row1"><a href="index3.html">Yes</td></a>
+                <td>
+                <input type="button" id="edit_button1" value="Edit" class="edit" onclick="edit_row('1')">
+                <input type="button" id="save_button1" value="Save" class="save" onclick="save_row('1')">
+                <input type="button" value="Delete" class="delete" onclick="delete_row('1')">
+                </td>
+                </tr>
+                <tr id="row2">
+                <td align="right" id="aadhar_row2">999971658847</td>
+                <td id="name_row2">Ganga</td>
+                <td align="right" id="age_row2">67</td>
+                <td id="gender_row2">Female</td>
+                <td id="add_row2">Pocharam</td>
+                <td id="record_row2">No</td>
+                <td>
+                <input type="button" id="edit_button2" value="Edit" class="edit" onclick="edit_row('2')">
+                <input type="button" id="save_button2" value="Save" class="save" onclick="save_row('2')">
+                <input type="button" value="Delete" class="delete" onclick="delete_row('2')">
+                </td>
+                </tr>
+                <tr id="row3">
+                <td align="right" id="aadhar_row3">999933119405</td>
+                <td id="name_row3">Ramayya</td>
+                <td align="right" id="age_row3">67</td>
+                <td id="gender_row3">Male</td>
+                <td id="add_row3">Manneguda</td>
+                <td id="record_row3"><a href="index4.html">Yes</a></td>
+                <td>
+                <input type="button" id="edit_button3" value="Edit" class="edit" onclick="edit_row('3')">
+                <input type="button" id="save_button3" value="Save" class="save" onclick="save_row('3')">
+                <input type="button" value="Delete" class="delete" onclick="delete_row('3')">
+                </td>
+                </tr>
+                <tr id="row4">
+                <td align="right" id="aadhar_row4">999955183433</td>
+                <td id="name_row4">Asif</td>
+                <td align="right" id="age_row4">39</td>
+                <td id="gender_row4">Male</td>
+                <td id="add_row4">Manchal</td>
+                <td id="record_row4">No</td>
+                <td>
+                <input type="button" id="edit_button4" value="Edit" class="edit" onclick="edit_row('4')">
+                <input type="button" id="save_button4" value="Save" class="save" onclick="save_row('4')">
+                <input type="button" value="Delete" class="delete" onclick="delete_row('4')">
+                </td>
+                </tr>
+                <tr id="row5">
+                <td align="right" id="aadhar_row5">999990501894</td>
+                <td id="name_row5">John</td>
+                <td align="right" id="age_row5">51</td>
+                <td id="gender_row5">Male</td>
+                <td id="add_row5">Ayyavaripalli</td>
+                <td id="record_row5">No</td>
+                <td>
+                <input type="button" id="edit_button5" value="Edit" class="edit" onclick="edit_row('5')">
+                <input type="button" id="save_button5" value="Save" class="save" onclick="save_row('5')">
+                <input type="button" value="Delete" class="delete" onclick="delete_row('5')">
+                </td>
+                </tr>
+                <tr id="row6">
+                <td align="right" id="aadhar_row6">123412341234</td>
+                <td id="name_row6">Saraswathi</td>
+                <td align="right" id="age_row6">34</td>
+                <td id="gender_row6">Female</td>
+                <td id="add_row6">Brahmanapalli</td>
+                <td id="record_row6">No</td>
+                <td>
+                <input type="button" id="edit_button6" value="Edit" class="edit" onclick="edit_row('6')">
+                <input type="button" id="save_button6" value="Save" class="save" onclick="save_row('6')">
+                <input type="button" value="Delete" class="delete" onclick="delete_row('6')">
+                </td>
+                </tr>
+                <tr id="row7">
+                    <td align="right" id="aadhar_row7">123456789323</td>
+                    <td id="name_row7">Manga</td>
+                    <td align="right" id="age_row7">24</td>
+                    <td id="gender_row7">Female</td>
+                    <td id="add_row7">Ragannaguda</td>
+                    <td id="record_row7">No</td>
+                    <td>
+                    <input type="button" id="edit_button7" value="Edit" class="edit" onclick="edit_row('7')">
+                    <input type="button" id="save_button7" value="Save" class="save" onclick="save_row('7')">
+                    <input type="button" value="Delete" class="delete" onclick="delete_row('7')">
+                    </td>
+                    </tr>
+                    <tr id="row8">
+                        <td align="right" id="aadhar_row8">123456689123</td>
+                        <td id="name_row8">Bhimayya</td>
+                        <td align="right" id="age_row8">54</td>
+                        <td id="gender_row8">Male</td>
+                        <td id="add_row8">Brahmanapalli</td>
+                        <td id="record_row8">No</td>
+                        <td>
+                        <input type="button" id="edit_button8" value="Edit" class="edit" onclick="edit_row('8')">
+                        <input type="button" id="save_button8" value="Save" class="save" onclick="save_row('8')">
+                        <input type="button" value="Delete" class="delete" onclick="delete_row('8')">
+                        </td>
+                        </tr>
+                        <tr id="row9">
+                            <td align="right" id="aadhar_row9">111111111111</td>
+                            <td id="name_row9">Srimathi</td>
+                            <td align="right" id="age_row9">52</td>
+                            <td id="gender_row9">Female</td>
+                            <td id="add_row9">Manchal</td>
+                            <td id="record_row9">No</td>
+                            <td>
+                            <input type="button" id="edit_button9" value="Edit" class="edit" onclick="edit_row('9')">
+                            <input type="button" id="save_button9" value="Save" class="save" onclick="save_row('9')">
+                            <input type="button" value="Delete" class="delete" onclick="delete_row('9')">
+                            </td>
+                            </tr>
+                            <tr id="row10">
+                                <td align="right" id="aadhar_row10">123456781234</td>
+                                <td id="name_row10">Somayya</td>
+                                <td align="right" id="age_row10">54</td>
+                                <td id="gender_row10">Male</td>
+                                <td id="add_row10">Ibrahimpatan</td>
+                                <td id="record_row10">No</td>
+                                <td>
+                                <input type="button" id="edit_button10" value="Edit" class="edit" onclick="edit_row('10')">
+                                <input type="button" id="save_button10" value="Save" class="save" onclick="save_row('10')">
+                                <input type="button" value="Delete" class="delete" onclick="delete_row('10')">
+                                </td>
+                                </tr>
+                <tr>
+                <td><input type="text" id="new_aadhar"></td>
+                <td><input type="text" id="new_name"></td>
+                <td><input type="text" id="new_age"></td>
+                <td><input type="text" id="new_gender"></td>
+                <td><input type="text" id="new_add"></td>
+                <td><input type="text" id="new_record"></td>
+                <td><input type="button" class="add" onclick="add_row();" value="Add Row"></td>
+                </tr>
+                    
+                </tbody></table>
+</html>

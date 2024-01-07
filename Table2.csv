@@ -1,0 +1,10 @@
+Name,Date of Admission,Hospital/Diagnostics Name,Address,Name of the Doctor,Illness,Tests performed,Surgery Peformed,Treatment Given,Date of Discharge,Records link
+Laxmi,19-08-2016,SVS Hospital,BN reddy,Dr.Anil,TB ,CT Scan,NO,TB Drugs,27-08-2021,"1.CT Scan
+2.Prescrption
+3.Discharge summary"
+Laxmi,24-08-2018,Kamineni Hospital,LB Nagar,Dr.Sudha,MI,Angioplasty,NO,MI,02-12-2018,"1.Angiogram
+2.Prescrption
+3.Discharge summary"
+Laxmi,02-03-2019,Omni Hospital,Chaitanyapuri,Dr.Rao,MI,Angioplaty,NO,MI,05-03-2019,"1.Angiogram
+2.Prescrption
+3.Discharge summary"

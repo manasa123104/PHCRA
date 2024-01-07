@@ -1,0 +1,83 @@
+<html>
+<table class="table table-bordered table-hover table-condensed" cellspacing=2 cellpadding=5 id="data_table">
+    <thead><tr><th title="Field #1">Name</th>
+    <th title="Field #2">Date of Admission</th>
+    <th title="Field #3">Hospital/Diagnostics Name</th>
+    <th title="Field #4">Address</th>
+    <th title="Field #5">Name of the Doctor</th>
+    <th title="Field #6">Illness</th>
+    <th title="Field #7">Tests performed</th>
+    <th title="Field #8">Surgery Peformed</th>
+    <th title="Field #9">Treatment Given</th>
+    <th title="Field #10">Date of Discharge</th>
+    <th title="Field #11">Records link</th>
+    </tr></thead>
+    <tbody><tr id="row1">
+    <td id="name_row1">Laxmi</td>
+    <td id="date_row1">19-08-2016</td>
+    <td id="hos_row1">SVS Hospital</td>
+    <td id="add_row1">BN reddy</td>
+    <td id="doc_row1">Dr.Anil</td>
+    <td id="il_row1">TB</td>
+    <td id="tes_row1">CT Scan</td>
+    <td id="su_row1">NO</td>
+    <td id="med_row1">TB Drugs</td>
+    <td id="dis_row1">27-08-2021</td>
+    <td id="rec_row1"><a href='CT Scan.pdf'>1.CT Scan</a><br/><a href='Pres1.pdf'>2.Prescrption</a><br/><a href='discharge.pdf'>3.Discharge summary</a></td>
+    <td>
+    <input type="button" id="edit_button1" value="Edit" class="edit" onclick="edit_row('1')">
+    <input type="button" id="save_button1" value="Save" class="save" onclick="save_row('1')">
+    <input type="button" value="Delete" class="delete" onclick="delete_row('1')">
+    </td>
+    </tr>
+    <tr id="row2">
+    <td id="name_row2">Laxmi</td>
+    <td id="date_row2">24-08-2018</td>
+    <td id="hos_row2">Kamineni Hospital</td>
+    <td id="add_row2">LB Nagar</td>
+    <td id="doc_row2">Dr.Sudha</td>
+    <td id="il_row2">MI</td>
+    <td id="tes_row2">Angioplasty</td>
+    <td id="su_row2">NO</td>
+    <td id="med_row2">MI</td>
+    <td id="dis_row2">02-12-2018</td>
+    <td id="rec_row2"><a href='https://s3.amazonaws.com/online.pubhtml5.com/eize/cxiw/index.html#p=3'>1.Angiogram</a><br/><a href='pres.pdf'>2.Prescrption</a><br/><a href='Discharge1.pdf'>3.Discharge summary</a></td>
+    <td>
+    <input type="button" id="edit_button2" value="Edit" class="edit" onclick="edit_row('2')">
+    <input type="button" id="save_button2" value="Save" class="save" onclick="save_row('2')">
+    <input type="button" value="Delete" class="delete" onclick="delete_row('2')">
+    </td>
+    </tr>
+    <tr id="row3">
+    <td id="name_row3">Laxmi</td>
+    <td id="date_row3">02-03-2019</td>
+    <td id="hos_row3">Omni Hospital</td>
+    <td id="add_row3">Chaitanyapuri</td>
+    <td id="doc_row3">Dr.Rao</td>
+    <td id="il_row3">MI</td>
+    <td id="tes_row3">Angioplaty</td>
+    <td id="su_row3">NO</td>
+    <td id="med_row3">MI</td>
+    <td id="dis_row3">05-03-2019</td>
+    <td id="rec_row3"><a href='Angi.pdf'>1.Angiogram</a><br/><a href='Pres1.pdf'>2.Prescrption</a><br/><a href='discharge.pdf'>3.Discharge summary</a></td>
+    <td>
+    <input type="button" id="edit_button3" value="Edit" class="edit" onclick="edit_row('3')">
+    <input type="button" id="save_button3" value="Save" class="save" onclick="save_row('3')">
+    <input type="button" value="Delete" class="delete" onclick="delete_row('3')">
+    </td>
+    </tr>
+    <tr>
+    <td><input type="text" id="new_name"></td>
+    <td><input type="text" id="new_date"></td>
+    <td><input type="text" id="new_hos"></td>
+    <td><input type="text" id="new_add"></td>
+    <td><input type="text" id="new_doc"></td>
+    <td><input type="text" id="new_il"></td>
+    <td><input type="text" id="new_tes"></td>
+    <td><input type="text" id="new_su"></td>
+    <td><input type="text" id="new_med"></td>
+    <td><input type="text" id="new_dis"></td>
+    <td><input type="text" id="new_rec"></td>
+    <td><input type="button" class="add" onclick="add_row();" value="Add Row"></td>
+    </tr>
+    </tbody></table></html>

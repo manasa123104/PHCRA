@@ -1,0 +1,262 @@
+<html>
+    <head>
+        <title>Call Center Application</title>
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+          <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+          <link href="https://fonts.googleapis.com/css2?family=Anton&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <style>
+            body{
+                background:whitesmoke;
+          }
+    div{
+        margin: auto;
+          
+        text-align: center;
+    }
+    
+    h2{
+    text-align: center;
+}
+label{
+    color:black;
+    padding:10px;
+}
+.inputText
+{
+    width:300px;
+    height:30px;
+    border:none;
+    border-radius:2px;
+    padding-left: 8px;
+}
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color:grey;
+   color:black;
+   text-align: center;
+   font-size: 15px;
+}
+    
+        </style>
+        <div>
+        <div class="container">
+            <h1 style="text-align:center";>Primary Healthcare Center for Remote Access(PHCRA)<i class="fa fa-user-md" style="font-size:48px;color:black"></i></h1>
+        <h2>Patient Hospitalization / Diagnostics Record</h2> </div>
+        <script>
+            function edit_row(no)
+            {
+             
+             document.getElementById("edit_button"+no).style.display="none";
+             document.getElementById("save_button"+no).style.display="block";
+                
+             var name=document.getElementById("name_row"+no);
+             var date=document.getElementById("date_row"+no);
+             var hos=document.getElementById("hos_row"+no);
+             var add=document.getElementById("add_row"+no);
+             var doc=document.getElementById("doc_row"+no);
+             var il=document.getElementById("il_row"+no);
+             var tes=document.getElementById("tes_row"+no);
+             var su=document.getElementById("su_row"+no);
+             var med=document.getElementById("med_row"+no);
+             var dis=document.getElementById("dis_row"+no);
+             var rec=document.getElementById("rec_row"+no);
+             
+                
+             var name_data=name.innerHTML;
+             var date_data=date.innerHTML;
+             var hos_data=hos.innerHTML;
+             var add_data=add.innerHTML;
+             var doc_data=doc.innerHTML;
+             var il_data=il.innerHTML;
+             var tes_data=tes.innerHTML;
+             var su_data=su.innerHTML;
+             var med_data=med.innerHTML;
+             var dis_data=dis.innerHTML;
+             var rec_data=rec.innerHTML;
+             
+                
+                
+             
+             
+             name.innerHTML="<input type='text' id='name_text"+no+"' value='"+name_data+"'>";
+             date.innerHTML="<input type='text' id='date_text"+no+"' value='"+date_data+"'>";
+             hos.innerHTML="<input type='text' id='hos_text"+no+"' value='"+hos_data+"'>";
+             add.innerHTML="<input type='text' id='add_text"+no+"' value='"+add_data+"'>";
+             doc.innerHTML="<input type='text' id='doc_text"+no+"' value='"+doc_data+"'>";
+             il.innerHTML="<input type='text' id='il_text"+no+"' value='"+il_data+"'>";
+             tes.innerHTML="<input type='text' id='tes_text"+no+"' value='"+tes_data+"'>";
+             su.innerHTML="<input type='text' id='su_text"+no+"' value='"+su_data+"'>";
+             med.innerHTML="<input type='text' id='med_text"+no+"' value='"+med_data+"'>";
+             dis.innerHTML="<input type='text' id='dis_text"+no+"' value='"+dis_data+"'>";
+             rec.innerHTML="<input type='text' id='rec_text"+no+"' value='"+rec_data+"'>";
+             
+            }
+            
+            function save_row(no)            {
+             var name_val=document.getElementById("name_text"+no).value;
+             var date_val=document.getElementById("date_text"+no).value;
+             var hos_val=document.getElementById("hos_text"+no).value;
+             var add_val=document.getElementById("add_text"+no).value;
+             var doc_val=document.getElementById("doc_text"+no).value;
+             var il_val=document.getElementById("il_text"+no).value;
+             var tes_val=document.getElementById("tes_text"+no).value;
+             var su_val=document.getElementById("su_text"+no).value;
+             var med_val=document.getElementById("med_text"+no).value;
+             var dis_val=document.getElementById("dis_text"+no).value;
+             var rec_val=document.getElementById("rec_text"+no).value;
+            
+             document.getElementById("name_row"+no).innerHTML=name_val;
+             document.getElementById("date_row"+no).innerHTML=date_val;
+             document.getElementById("hos_row"+no).innerHTML=hos_val;
+             document.getElementById("add_row"+no).innerHTML=add_val;
+             document.getElementById("doc_row"+no).innerHTML=doc_val;
+             document.getElementById("il_row"+no).innerHTML=il_val;
+             document.getElementById("tes_row"+no).innerHTML=tes_val;
+             document.getElementById("su_row"+no).innerHTML=su_val;
+             document.getElementById("med_row"+no).innerHTML=med_val;
+             document.getElementById("dis_row"+no).innerHTML=dis_val;
+             document.getElementById("rec_row"+no).innerHTML=rec_val;
+            
+            
+             document.getElementById("edit_button"+no).style.display="block";
+             document.getElementById("save_button"+no).style.display="none";
+            }
+            
+            function delete_row(no)
+            {
+             document.getElementById("row"+no+"").outerHTML="";
+            }
+            
+            function add_row()
+            {
+             var new_name=document.getElementById("new_name").value;
+             var new_date=document.getElementById("new_date").value;
+             var new_hos=document.getElementById("new_hos").value;
+             var new_add=document.getElementById("new_add").value;
+             var new_doc=document.getElementById("new_doc").value;
+             var new_il=document.getElementById("new_il").value;
+             var new_tes=document.getElementById("new_tes").value;
+             var new_su=document.getElementById("new_su").value;
+             var new_med=document.getElementById("new_med").value;
+             var new_dis=document.getElementById("new_dis").value;
+             var new_rec=document.getElementById("new_rec").value;
+            
+                
+             var table=document.getElementById("data_table");
+             var table_len=(table.rows.length)-1;
+             var row = table.insertRow(table_len).outerHTML="<tr id='row"+table_len+"'><td id='name_row"+table_len+"'>"+new_name+"</td><td id='date_row"+table_len+"'>"+new_date+"</td><td id='hos_row"+table_len+"'>"+new_hos+"</td><td id='add_row"+table_len+"'>"+new_add+"</td><td id='doc_row"+table_len+"'>"+new_doc+"</td><td id='il_row"+table_len+"'>"+new_il+"</td><td id='tes_row"+table_len+"'>"+new_tes+"</td><td id='su_row"+table_len+"'>"+new_su+"</td><td id='med_row"+table_len+"'>"+new_med+"</td><td id='dis_row"+table_len+"'>"+new_dis+"</td><td id='rec_row"+table_len+"'>"+new_rec+"</td><td><input type='button' id='edit_button"+table_len+"' value='Edit' class='edit' onclick='edit_row("+table_len+")'> <input type='button' id='save_button"+table_len+"' value='Save' class='save' onclick='save_row("+table_len+")'> <input type='button' value='Delete' class='delete' onclick='delete_row("+table_len+")'></td></tr>";
+            
+            
+             document.getElementById("new_name").value="";
+             document.getElementById("new_date").value="";
+             document.getElementById("new_hos").value="";
+             document.getElementById("new_add").value="";
+             document.getElementById("new_doc").value="";
+             document.getElementById("new_il").value="";
+             document.getElementById("new_tes").value="";
+             document.getElementById("new_su").value="";
+             document.getElementById("new_med").value="";
+             document.getElementById("new_dis").value="";
+             document.getElementById("new_rec").value="";
+             
+            }
+    </script>
+    <table class="table table-bordered table-hover table-condensed" cellspacing=2 cellpadding=5 id="data_table">
+        <thead><tr><th title="Field #1">Name</th>
+        <th title="Field #2">Date of Admission</th>
+        <th title="Field #3">Hospital/Diagnostics Name</th>
+        <th title="Field #4">Address</th>
+        <th title="Field #5">Name of the Doctor</th>
+        <th title="Field #6">Illness</th>
+        <th title="Field #7">Tests performed</th>
+        <th title="Field #8">Surgery Peformed</th>
+        <th title="Field #9">Treatment Given</th>
+        <th title="Field #10">Date of Discharge</th>
+        <th title="Field #11">Records link</th>
+        </tr></thead>
+        <tbody><tr id="row1">
+        <td id="name_row1">Ramayya</td>
+        <td id="date_row1">15-08-2014</td>
+        <td id="hos_row1">SR Hospital</td>
+        <td id="add_row1">BN reddy</td>
+        <td id="doc_row1">Dr.Sunitha</td>
+        <td id="il_row1">TB</td>
+        <td id="tes_row1">CT Scan</td>
+        <td id="su_row1">NO</td>
+        <td id="med_row1">TB Drugs</td>
+        <td id="dis_row1">27-08-2021</td>
+        <td id="rec_row1"><a href='CT Scan.pdf'>1.CT Scan</a><br/><a href='Pres1.pdf'>2.Prescrption</a><br/><a href='discharge.pdf'>3.Discharge summary</a></td>
+        <td>
+        <input type="button" id="edit_button1" value="Edit" class="edit" onclick="edit_row('1')">
+        <input type="button" id="save_button1" value="Save" class="save" onclick="save_row('1')">
+        <input type="button" value="Delete" class="delete" onclick="delete_row('1')">
+        </td>
+        </tr>
+        <tr id="row2">
+        <td id="name_row2">Ramayya</td>
+        <td id="date_row2">21-08-2018</td>
+        <td id="hos_row2">Laxmi Hospital</td>
+        <td id="add_row2">LB Nagar</td>
+        <td id="doc_row2">Dr.Swapna</td>
+        <td id="il_row2">MI</td>
+        <td id="tes_row2">Angioplasty</td>
+        <td id="su_row2">NO</td>
+        <td id="med_row2">MI</td>
+        <td id="dis_row2">02-12-2018</td>
+        <td id="rec_row2"><a href='https://s3.amazonaws.com/online.pubhtml5.com/eize/cxiw/index.html#p=3'>1.Angiogram</a><br/><a href='pres.pdf'>2.Prescrption</a><br/><a href='Discharge1.pdf'>3.Discharge summary</a></td>
+        <td>
+        <input type="button" id="edit_button2" value="Edit" class="edit" onclick="edit_row('2')">
+        <input type="button" id="save_button2" value="Save" class="save" onclick="save_row('2')">
+        <input type="button" value="Delete" class="delete" onclick="delete_row('2')">
+        </td>
+        </tr>
+        <tr id="row3">
+        <td id="name_row3">Ramayya</td>
+        <td id="date_row3">12-03-2019</td>
+        <td id="hos_row3">Omni Hospital</td>
+        <td id="add_row3">Chaitanyapuri</td>
+        <td id="doc_row3">Dr.Bheem Rao</td>
+        <td id="il_row3">MI</td>
+        <td id="tes_row3">Angioplaty</td>
+        <td id="su_row3">NO</td>
+        <td id="med_row3">MI</td>
+        <td id="dis_row3">05-03-2019</td>
+        <td id="rec_row3"><a href='Angi.pdf'>1.Angiogram</a><br/><a href='Pres1.pdf'>2.Prescrption</a><br/><a href='discharge.pdf'>3.Discharge summary</a></td>
+        <td>
+        <input type="button" id="edit_button3" value="Edit" class="edit" onclick="edit_row('3')">
+        <input type="button" id="save_button3" value="Save" class="save" onclick="save_row('3')">
+        <input type="button" value="Delete" class="delete" onclick="delete_row('3')">
+        </td>
+        </tr>
+        <tr>
+        <td><input type="text" id="new_name"></td>
+        <td><input type="text" id="new_date"></td>
+        <td><input type="text" id="new_hos"></td>
+        <td><input type="text" id="new_add"></td>
+        <td><input type="text" id="new_doc"></td>
+        <td><input type="text" id="new_il"></td>
+        <td><input type="text" id="new_tes"></td>
+        <td><input type="text" id="new_su"></td>
+        <td><input type="text" id="new_med"></td>
+        <td><input type="text" id="new_dis"></td>
+        <td><input type="text" id="new_rec"></td>
+        <td><input type="button" class="add" onclick="add_row();" value="Add Row"></td>
+        </tr>
+        </tbody></table>
+    <button type="button" onclick="alert('Near By Hospital Contact No.9903089612')">Fix Appointment</button>
+    <button onclick="window.location.href='index2.html'">GO BACK</button>
+</div>
+    
+</body>
+</html>
